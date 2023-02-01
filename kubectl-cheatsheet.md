@@ -17,8 +17,10 @@ List only pods:
 kubectl get pods
 ```
 
-# list all resources:
+List all resources:
+```
 kubectl get all
+```
 
 Enable pod container to be called externally (by default only accessible within k8s cluster (`external port:internal port`):
 ```

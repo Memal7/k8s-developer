@@ -110,3 +110,47 @@ Get information about deployment:
 ```
 kubectl describe deployment simple-nginx
 ```
+
+---
+## Create, delete, and manage ConfigMaps
+Create a ConfigMap and input value directly through command:
+```
+kubectl create configmap app-config --from-literal=APP_COLOR=blue
+```
+
+Another way to input configurations through a file:
+```
+kubectl create configmap app-config --from-file=app_config.properties
+```
+
+List all ConfigMaps:
+```
+kubectl get configmaps
+```
+
+Describe a ConfigMap:
+```
+kubectl describe configmaps app-config
+```
+
+Apply a ConfigMap YAML file:
+```
+kubectl apply -f config-map.yml
+```
+
+---
+## Create, delete, and manage Secrets
+List all secrets:
+```
+kubectl get secrets
+```
+
+Create a new secret:
+```
+kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123
+```
+
+Delete a secret:
+```
+kubectl delete secret generic db-secret
+```

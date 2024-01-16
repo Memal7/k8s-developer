@@ -6,6 +6,11 @@ metadata:
     app: simple-nginx
 spec:
   replicas: 3
+    strategy:
+    rollingUpdate:
+      maxSurge: 4
+      maxUnavailable: 2
+    type: RollingUpdate
   selector:
     matchLabels:
       app: simple-nginx

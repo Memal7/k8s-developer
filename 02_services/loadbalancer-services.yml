@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: nginx-loadbalancer
 spec:
+  type: LoadBalancer
   selector:
     app: simple-nginx
   ports:
@@ -10,7 +11,6 @@ spec:
       port: 80
       targetPort: 9376
   clusterIP: 10.96.8.7
-  type: LoadBalancer
 status:
   loadBalancer:
     ingress:

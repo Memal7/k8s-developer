@@ -47,6 +47,11 @@ Jump into container of the pod:
 kubectl exec demopod -it sh
 ```
 
+Look at to pod logs:
+```
+kubectl logs demo-pod
+```
+
 ---
 ## Create, delete, and manage ReplicaSet
 Create/apply a replicaset:

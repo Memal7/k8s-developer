@@ -37,9 +37,9 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 30
         resources:
-          requests:
+          requests: # the amount that k8s guarantees to the container. The scheduler uses this value to find the best node for the pod.
             memory: "64Mi"
             cpu: "250m"
-          limits:
+          limits: # the maximum amount of resources that the container can use
             memory: "128Mi" # 128 MB
-            cpu: "500m" # 0.5 CPU
+            cpu: "500m" # 0.5 CPU (milliCPU)
